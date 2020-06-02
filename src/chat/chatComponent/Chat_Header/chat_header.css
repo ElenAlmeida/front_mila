@@ -34,3 +34,16 @@
 .container__navbar-close{
   align-self: center;
 }
+
+@media only screen and (max-width: 720px) {
+  .container__navbar {
+    height: 9vh;
+    width: 100vw;
+    background-color: #007bff;
+    border-radius: 0;   
+}
+.container__navbar-nav{
+  width: 90vw;
+}
+
+}

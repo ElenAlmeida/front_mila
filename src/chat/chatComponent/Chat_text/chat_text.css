@@ -66,5 +66,14 @@
   justify-self: end;
 }
 
+@media only screen and (max-width: 720px) {
+  .container__msg{
+    height: auto;
+  }
+  .container__btn{
+    display: grid;
+  }
+}
+
 
 

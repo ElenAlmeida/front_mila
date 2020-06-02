@@ -5,8 +5,7 @@ import ChatScreen from './chat/chatScreen/chat_screen';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello world</h1>
+    <div className="App">    
       <ChatScreen></ChatScreen>
      </div>
   );

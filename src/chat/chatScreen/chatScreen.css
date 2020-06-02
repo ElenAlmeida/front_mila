@@ -9,3 +9,13 @@
   grid-auto-flow: row;
 }
 
+@media only screen and (max-width: 720px) {
+  .container__bodyChat {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    border-radius: 0;
+  }
+
+}
+

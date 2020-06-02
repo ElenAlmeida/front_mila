@@ -36,3 +36,13 @@
  background: none;
  outline: none;
 }
+
+
+@media only screen and (max-width: 720px) {
+   .container__sendMessage{
+      border-radius: 0;
+   }
+   .container__sendMessage--input{
+      width: 80vw;
+   }
+ }
