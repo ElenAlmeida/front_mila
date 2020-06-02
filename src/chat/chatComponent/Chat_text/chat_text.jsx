@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import logo_amil from "../../assets/image/amil-icon.png";
 
 import parse from "html-react-parser";
@@ -7,6 +7,14 @@ import "./chat_text.css";
 import ChatBtn from "../Chat_Btn/chat_btn";
 
 export default function ChatTextMila({ data, sendIntent }) {
+
+  const textRef = useRef(null);
+
+  const scrollToBottom = () => {
+    textRef.current.scrollIntoView({behavior: "smooth"})
+  }
+
+  useEffect(scrollToBottom, [data]);
 
   const classText = (origin) => {
   const classText__Mila = "container__msg--text";
@@ -42,7 +50,9 @@ export default function ChatTextMila({ data, sendIntent }) {
               </div>
             </div>
           ))}
+          <div  ref={textRef}/>
         </div>
+        
       </section>
     </>
   );

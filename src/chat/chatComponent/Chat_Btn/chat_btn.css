@@ -1,15 +1,15 @@
-.container__msg--btn{
+.container__msg--btn {
   width: 15vw;
-  margin: 4px 16px ;
+  margin: 4px 16px;
   padding: 8px;
   border-radius: 12px;
   border: 1px solid rgb(209, 205, 205);
   background: #007bff;
-  color: white;  
+  color: white;
 }
 
-  @media only screen and (max-width: 720px) {
-    .container__msg--btn {
-      width: 75vw;
+@media only screen and (max-width: 550px) {
+  .container__msg--btn {
+    width: 75vw;
   }
 }
