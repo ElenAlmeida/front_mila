@@ -1,0 +1,36 @@
+.container__navbar{
+  height: 9vh;
+  width: 25vw;
+  background-color:#007bff  ;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  margin: 0;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.container__navbar-nav{
+  display: flex;
+  width: 23vw;
+  height: 8vh;
+  align-content: center;
+  justify-content: space-between;
+}
+.logo__nav{
+  height: 5vh;
+}
+
+.container__navbar-div{
+  color: white;
+  font-size: 1.4rem;
+  padding: 10px 0;
+  display: flex;
+}
+.container__navbar-title{
+  padding: 2px;
+  margin: 0;
+}
+.container__navbar-close{
+  align-self: center;
+}

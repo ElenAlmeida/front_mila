@@ -1,0 +1,38 @@
+.container__sendMessage{
+  background: white ;
+ height: 9vh;
+ display: grid;
+ grid-auto-flow: column;
+ align-self: end;
+ border-bottom-left-radius: 25px;
+ border-bottom-right-radius: 25px;
+ align-content: center;
+ justify-content: center;
+}
+
+.container__sendMessage--input{
+ width: 20vw;
+ height: 5.5vh;
+ /* border-radius: 25px; */
+ border: none;
+ resize: none;
+ outline: none;
+}
+
+.container__sendMessage--input::placeholder{
+ font-size: 1rem;
+ text-align: start;
+ padding-top: 8px;
+ padding-left: 8px;
+}
+.container__sendMessage--div{
+   display: grid;
+   align-items: center;
+   margin-right: 8px;
+}
+
+.container__sendMessage--btn{
+ border: none;
+ background: none;
+ outline: none;
+}
