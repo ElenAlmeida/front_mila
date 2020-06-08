@@ -31,7 +31,7 @@
 
 @media only screen and (max-width: 550px) {
   .container__msg{
-    height: auto;
+    height: 82vh;
   }
   .container__btn{
     display: grid;
