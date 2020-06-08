@@ -13,7 +13,7 @@ export default function ChatScreen() {
   const [msg_list, setMsg_list] = useState([]);
   const [sessionCode, setSessionCode] = useState();
   const [userInteraction, setUserInteraction] = useState();
-  const [value, setValue] = useState("oi");
+  const [value, setValue] = useState("");
 
   useEffect(() => {
     request(value).then((response) => {

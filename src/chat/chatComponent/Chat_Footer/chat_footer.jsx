@@ -10,7 +10,7 @@ export default function ChatFooter ({sendMsg}) {
   }
   
   const cleanInput = () => {
-    setMessage(' ');
+    setMessage("");
   }
 
   const handleClick = () => {
@@ -18,6 +18,13 @@ export default function ChatFooter ({sendMsg}) {
         sendMsg( message)
         cleanInput()
       } 
+  }
+
+  const enterkey = e => {
+    if(e.keyCode === 13 && e.shiftKey === false ){
+      e.preventDefault();
+      handleClick();
+    }
   }
 
   return(
@@ -28,6 +35,7 @@ export default function ChatFooter ({sendMsg}) {
               id="send_msg"
               placeholder="Faça a sua Pergunta"
               className="container__sendMessage--input"
+              onKeyDown={enterkey}
               value={message}
               onChange={checkMsg}
             ></textarea>

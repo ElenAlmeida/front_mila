@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import parse from "html-react-parser";
-import ChatBtn from "../Chat_Btn/chat_btn";
 
 import "./textBallon.css";
+import Logo_amil from "./logo_amil";
 
-export default function textBallon__Mila(data, origin) {
-  const classText = (origin) => {
+export default function TextBallon__Mila({ origin, text, icon }) {
+  const classText = (origins) => {
     const classText__Mila = "container__msg--text";
     const classText__User = "container__msg--textUser  msg--user";
 
-    if (origin === "Mila") {
+    if (origins === "Mila") {
       return classText__Mila;
     } else {
       return classText__User;
@@ -18,8 +18,11 @@ export default function textBallon__Mila(data, origin) {
 
   return (
     <>
-      <div className={classText(origin)}>
-        <span>{parse(`${data}`)}</span>
+      <div className="container__msg--text-icon">
+        {icon && <Logo_amil />}
+        <div className={classText(origin)}>
+          <span>{parse(`${text}`)}</span>
+        </div>
       </div>
     </>
   );
