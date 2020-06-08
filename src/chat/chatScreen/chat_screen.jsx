@@ -41,17 +41,16 @@ export default function ChatScreen() {
   };
 
   return (
-    <>
+    <section className="container">
       <section className="container__bodyChat">
         <ChatHeader setClose={setClose} close={close}/>
         {close && (
-          <>
+          <> 
             <ChatTextMila data={msg_list} sendIntent={sendIntentBtn} />
             <ChatFooter sendMsg={enviaMsg} />
           </>
         )}
-        
       </section>     
-    </>
+    </section>
   );
 }

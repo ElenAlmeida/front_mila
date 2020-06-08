@@ -4,8 +4,8 @@
  display: grid;
  grid-auto-flow: column;
  align-self: end;
- border-bottom-left-radius: 25px;
- border-bottom-right-radius: 25px;
+ border-bottom-left-radius: 20px;
+ border-bottom-right-radius: 20px;
  align-content: center;
  justify-content: center;
 }

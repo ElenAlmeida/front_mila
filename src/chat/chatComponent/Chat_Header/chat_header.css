@@ -2,8 +2,8 @@
   height: 9vh;
   width: 25vw;
   background-color:#007bff  ;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   margin: 0;
   display: grid;
   align-items: center;
@@ -17,6 +17,12 @@
   align-content: center;
   justify-content: space-between;
 }
+
+.container__navbar-close{
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
 .logo__nav{
   height: 5vh;
 }
