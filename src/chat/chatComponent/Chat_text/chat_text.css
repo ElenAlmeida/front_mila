@@ -6,6 +6,14 @@
   /* overflow-y: hidden; */
 }
 
+.container__msg::-webkit-scrollbar{
+    width: 1vw;
+    height: 1vh;
+}
+.container__msg::-webkit-scrollbar-track{
+  background: transparent;
+}
+
 .container__msg--list {
   margin-top: 16px; 
   flex-direction: column-reverse;
