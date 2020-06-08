@@ -35,6 +35,12 @@
   align-self: center;
 }
 
+.container__navbar-btnClose{
+  background: none;
+  border: none;
+  outline: none;
+}
+
 @media only screen and (max-width: 550px) {
   .container__navbar {
     height: 9vh;

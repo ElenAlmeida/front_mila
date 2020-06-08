@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import request from "../../services/chatEva";
 import send from "../assets/image/icon_enviar_ativo.png";
@@ -8,6 +8,7 @@ import ChatFooter from "../chatComponent/Chat_Footer/chat_footer";
 import ChatTextMila from "../chatComponent/Chat_text/chat_text";
 
 export default function ChatScreen() {
+  const [close, setClose] = useState(true);
   const [data, setData] = useState([]);
   const [msg_list, setMsg_list] = useState([]);
   const [sessionCode, setSessionCode] = useState();
@@ -29,22 +30,28 @@ export default function ChatScreen() {
     setMsg_list([...msg_list, obj_text]);
   };
 
-  const enviaMsg = ( msg) => {
+  const enviaMsg = (msg) => {
     setValue(msg);
     concatMsg(msg, "user", "", "");
   };
 
-  const sendIntentBtn = ( text, msg) => {
+  const sendIntentBtn = (text, msg) => {
     setValue(msg);
     concatMsg(text, "user", "");
   };
+
   return (
     <>
       <section className="container__bodyChat">
-        <ChatHeader />
-        <ChatTextMila data = {msg_list} sendIntent={sendIntentBtn} />        
-        <ChatFooter sendMsg={enviaMsg} />
-      </section>
+        <ChatHeader setClose={setClose} close={close}/>
+        {close && (
+          <>
+            <ChatTextMila data={msg_list} sendIntent={sendIntentBtn} />
+            <ChatFooter sendMsg={enviaMsg} />
+          </>
+        )}
+        
+      </section>     
     </>
   );
 }

@@ -8,6 +8,8 @@ import ChatBtn from "../Chat_Btn/chat_btn";
 
 export default function ChatTextMila({ data, sendIntent }) {
 
+
+
   const textRef = useRef(null);
 
   const scrollToBottom = () => {
@@ -52,7 +54,6 @@ export default function ChatTextMila({ data, sendIntent }) {
           ))}
           <div  ref={textRef}/>
         </div>
-        
       </section>
     </>
   );
