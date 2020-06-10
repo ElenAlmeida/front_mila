@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
-import request from "../../services/chatEva";
+import request from "../services/chatEva";
 import "./chatScreen.css";
 import ChatHeader from "../chatComponent/Chat_Header/chat_header";
 import ChatFooter from "../chatComponent/Chat_Footer/chat_footer";
@@ -56,3 +56,6 @@ export default function ChatScreen() {
     </section>
   );
 }
+
+// Instalação
+// npm i html-react-parser

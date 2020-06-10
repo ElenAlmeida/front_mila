@@ -40,3 +40,9 @@
 .span__icon_amil{
   align-self: end;
 }
+
+@media only screen and (max-width: 550px) {
+  .container__msg--text-icon{   
+    grid-template-columns: 12vw auto;
+  }
+}
