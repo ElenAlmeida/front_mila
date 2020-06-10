@@ -1,14 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 
 import request from "../../services/chatEva";
-import send from "../assets/image/icon_enviar_ativo.png";
 import "./chatScreen.css";
 import ChatHeader from "../chatComponent/Chat_Header/chat_header";
 import ChatFooter from "../chatComponent/Chat_Footer/chat_footer";
 import ChatTextMila from "../chatComponent/Chat_text/chat_text";
 
 export default function ChatScreen() {
-  const [close, setClose] = useState(true);
+  const [close, setClose] = useState(false);
   const [data, setData] = useState([]);
   const [msg_list, setMsg_list] = useState([]);
   const [sessionCode, setSessionCode] = useState();
@@ -17,6 +16,9 @@ export default function ChatScreen() {
 
   useEffect(() => {
     request(value).then((response) => {
+      console.log(response)
+      // const text = response.answers[0].content;
+      // const btn = response.answers[0].buttons;
       const text = response.answers[0].text;
       const btn = response.answers[0].options;
       let result = response.answers[0];
