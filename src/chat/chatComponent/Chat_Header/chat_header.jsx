@@ -3,16 +3,22 @@ import logoamil from "../../assets/image/amil.png";
 import btnclose from "../../assets/image/icon_close.png";
 import "./chat_header.css";
 
-export default function ChatHeader({setClose, close}) {
+export default function ChatHeader({ setClose, close, color }) {
 
   const classNav = (status) => {
-    const classNavOpen = "container__navbar";
+    const classNavOpenBlue = "container__navbar  container__navbar-ColorBlue ";
+    const classNavOpenGreen = "container__navbar  container__navbar-ColorGreen";
     const classNavClose = "container__navbar  container__navbar-close"
 
     if(status === false){
       return classNavClose;
     }else{
-       return classNavOpen;
+
+      if(color === "blue"){
+        return classNavOpenBlue;
+      }if(color === "green"){
+        return classNavOpenGreen;
+      };    
     }
   }
 
@@ -21,7 +27,7 @@ export default function ChatHeader({setClose, close}) {
   }
 
   return (
-    <header className={classNav(close)}>
+    <header className={classNav(close)} >
       <nav className="container__navbar-nav">
         <div className="container__navbar-div">
           <span>

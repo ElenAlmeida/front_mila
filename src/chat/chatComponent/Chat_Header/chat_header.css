@@ -10,6 +10,14 @@
   justify-items: center;
 }
 
+.container__navbar-ColorBlue{
+  background: rgb(5, 13, 85);
+}
+
+.container__navbar-ColorGreen{
+  background: rgb(46, 126, 26);
+}
+
 .container__navbar-nav{
   display: flex;
   width: 23vw;
